@@ -197,16 +197,15 @@ public:
 		double z_max = -DBL_MAX;
 		for (int i = begin; i < end; i++)
         {
-			auto vertices_tmp = {vertices[indices[i].vtxi], vertices[indices[i].vtxj], vertices[indices[i].vtxk]};
-			for(const auto& vertex: vertices_tmp){
-				x_min = std::min(x_min, vertex[0]);
-				y_min = std::min(y_min, vertex[1]);
-				z_min = std::min(z_min, vertex[2]);
-				x_max = std::max(x_max, vertex[0]);
-				y_max = std::max(y_max, vertex[1]);
-				z_max = std::max(z_max, vertex[2]);
-
-			}
+			Vector x(vertices[indices[i].vtxi][0], vertices[indices[i].vtxj][0], vertices[indices[i].vtxk][0]);
+			Vector y(vertices[indices[i].vtxi][1], vertices[indices[i].vtxj][1], vertices[indices[i].vtxk][1]);
+			Vector z(vertices[indices[i].vtxi][2], vertices[indices[i].vtxj][2], vertices[indices[i].vtxk][2]);
+			x_min = std::min(x_min, min(x));
+			y_min = std::min(y_min, min(y));
+			z_min = std::min(z_min, min(z));
+			x_max = std::max(x_max, max(x));
+			y_max = std::max(y_max, max(y));
+			z_max = std::max(z_max, max(z));
         }
 		Vector Bmin(x_min, y_min, z_min);
 		Vector Bmax(x_max, y_max, z_max);
@@ -223,7 +222,7 @@ public:
         node->end = end;
 
 
-        Vector diag = node->bbox.Bmin - node->bbox.Bmax;
+        Vector diag = node->bbox.Bmax - node->bbox.Bmin;
         Vector middle_diag = node->bbox.Bmin + diag * 0.5;
 
 
@@ -240,7 +239,7 @@ public:
             }
         }
 
-        if (pivot_index <= begin|| pivot_index >= (end - 1) || (end - begin) < 5 ) return ;
+        if (pivot_index <= begin|| pivot_index >= (end - 1) || (end - begin) < 1 ) return ;
 
         node->left = new Node();
         node->right = new Node();
@@ -284,14 +283,14 @@ public:
 
 					Vector N_cur = cross(e1, e2);
 
-					double t_cur = dot(A - r.O, r.u)/ dot(r.u, N_cur);
+					double t_cur = dot(A - r.O, N_cur)/ dot(r.u, N_cur);
 
 					if (t_cur > 0 && t_cur < t){
-						N = N_cur;
-						double beta = dot(e2, cross(A - r.O, r.u))/ dot(r.u, N);
-						double gamma = -dot(e1, cross(A - r.O, r.u))/ dot(r.u, N);
+						double beta = dot(e2, cross(A - r.O, r.u))/ dot(r.u, N_cur);
+						double gamma = -dot(e1, cross(A - r.O, r.u))/ dot(r.u, N_cur);
 						double alpha = 1 - beta - gamma;
 						if (beta > 0 && beta < 1 && gamma > 0 && gamma < 1 && alpha > 0 && alpha < 1){
+							N = N_cur;
 							N.normalize();
 							t = t_cur;
 							P = A + beta * e1 +  gamma * e2;
@@ -301,7 +300,6 @@ public:
 				}
 			}
 		}
-		// std::cout << intersection;
 		return intersection;
 	}
     
@@ -485,6 +483,7 @@ public:
 		}
 		// Allocate memory for root
     	root = new Node();
+
 		// Run the bvh
 		bvh(root, 0, indices.size());
         fclose(f);
@@ -630,7 +629,6 @@ public:
 				}
 			}
 			L = I / (4 * M_PI * sqr(d)) * int(visible) * objects[sphere_idx]->rho / M_PI * (std::max(0., dot(N, w_i)));
-
 			Vector V = random_cos(N);
 			Ray random_ray(P + eps * N, V);
 			L = L + objects[sphere_idx]->rho * get_color(random_ray, ray_depth - 1);
@@ -652,29 +650,60 @@ void boxMuller(double stdev , double &x, double &y) {
 	y = sqrt(-2 * log(r1))*sin(2 * M_PI*r2)*stdev;
 }
 
-int main() {
+int main(int argc, char* argv[]) {
+	if (argc != 2) {
+        std::cerr << "Usage: " << argv[0] << " [scenario number, where 1 - spheres, 2 - cat]\n";
+        return 1;
+    }
 	int W = 512;
 	int H = 512;
-	//Sphere* sphere1 = new Sphere(Vector(0, 0, 0), 10, Vector(1, 1, 1), false, true);
-	// Sphere sphere2(Vector(-20, 0, 0), 10, Vector(1, 1, 1), true);
-	// Sphere sphere3(Vector(20, 0, 0), 10, Vector(1, 1, 1), false, true);
-	// Sphere sphere3b(Vector(20, 0, 0), 9.5, Vector(1, 1, 1), false, true, true);
 	Sphere* ceiling = new Sphere(Vector(0, 1000, 0), 940, Vector(1, 0, 0));
 	Sphere* floor = new Sphere(Vector(0, -1000, 0), 990, Vector(0, 0, 1));
 	Sphere* front = new Sphere(Vector(0, 0, -1000), 940, Vector(0, 1, 0));
 	Sphere* back = new Sphere(Vector(0, 0, 1000), 940, Vector(1, 0, 0.5));
 	Sphere* left = new Sphere(Vector(-1000, 0, 0), 940, Vector(1, 1, 0));
 	Sphere* right = new Sphere(Vector(1000, 0, 0), 940, Vector(0, 1, 1));
-
-	TriangleMesh* cat = new TriangleMesh(Vector(1, 1, 1));
-	cat->readOBJ("models/cat.obj");
 	Vector camera_center(0, 0, 55);
 	const double alpha = 60.*M_PI/180.;
 	const double I = 2E10;
-	const int K = 10;
+	const int K = 64;
 	Vector S(-10, 20, 40);
 	Scene scene(S, I);
+	Sphere* sphere1;
+	Sphere* sphere2;
+	Sphere* sphere3;
+	Sphere* sphere3b;
+	TriangleMesh* cat;
+	switch (std::atoi(argv[1])) {
+        case 1:
+			// Spheres image
+            sphere1 = new Sphere(Vector(0, 0, 0), 10, Vector(1, 1, 1), false, true);
+			sphere2 = new Sphere(Vector(-20, 0, 0), 10, Vector(1, 1, 1), true);
+			sphere3 = new Sphere(Vector(20, 0, 0), 10, Vector(1, 1, 1), false, true);
+			sphere3b = new Sphere(Vector(20, 0, 0), 9.5, Vector(1, 1, 1), false, true, true);
+			scene.add_object(sphere1);
+			scene.add_object(sphere2);
+			scene.add_object(sphere3);
+			scene.add_object(sphere3b);
+            break;
+        case 2:
+			// Cat image
+            cat = new TriangleMesh(Vector(1, 1, 1));
+			cat->readOBJ("models/cat.obj");
+			scene.add_object(cat);
+            break;
+        default:
+            std::cerr << "Invalid scenario number\n";
+            return 1;
+    }
+
 	
+	
+	//scene.add_object(sphere1);
+	// scene.add_object(sphere2);
+	// scene.add_object(sphere3);
+	// scene.add_object(sphere3b);
+
 	//scene.add_object(sphere1);
 	// scene.add_object(sphere2);
 	// scene.add_object(sphere3);
@@ -686,22 +715,18 @@ int main() {
 	scene.add_object(left);
 	scene.add_object(right);
 
-	scene.add_object(cat);
-
 	std::vector<unsigned char> image(W * H * 3, 0);
 	
-	#pragma omp parallel for
+	#pragma omp parallel for schedule(dynamic, 1)
 	for (int i = 0; i < H; i++) {
 		for (int j = 0; j < W; j++) {
 
 			double x,y;
 			Vector color(0,0,0);
-			Vector direction(x + j + 0.5 - W / 2, H - (y + i) - 1 + 0.5 - H / 2, -W / (2 * tan(alpha / 2)));
-			direction.normalize();
 			for (size_t k = 0; k < K; ++k){
-				// boxMuller(1,x,y);
-				// Vector direction(x + j + 0.5 - W / 2, H - (y + i) - 1 + 0.5 - H / 2, -W / (2 * tan(alpha / 2)));
-				// direction.normalize();
+				boxMuller(1,x,y);
+				Vector direction(x + j + 0.5 - W / 2, H - (y + i) - 1 + 0.5 - H / 2, -W / (2 * tan(alpha / 2)));
+				direction.normalize();
 				Ray ray = Ray(camera_center, direction);
 				Vector tmp_color = scene.get_color(ray, 5);
 				color = color + tmp_color / K;
