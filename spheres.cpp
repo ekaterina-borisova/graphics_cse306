@@ -15,6 +15,9 @@
 #include <numeric>
 #include <iterator>
 #include <random>
+#include <unistd.h>
+#include <initializer_list>
+#include <list>
 
 static std::default_random_engine engine(10);
 static std::uniform_real_distribution<double> uniform (0 ,1);
@@ -67,8 +70,14 @@ Vector operator*(const Vector& a, const double b) {
 Vector operator*(const Vector& a, const Vector& b) {
 	return Vector(a[0] * b[0], a[1] * b[1], a[2] * b[2]);
 }
+Vector operator/(const Vector& a, const Vector& b) {
+	return Vector(a[0] / b[0], a[1] / b[1], a[2] / b[2]);
+}
 Vector operator/(const Vector& a, const double b) {
 	return Vector(a[0] / b, a[1] / b, a[2] / b);
+}
+bool operator<(const Vector& a, const Vector& b) {
+	return (a[0] < b[0]) && (a[1] < b[1]) && (a[2] < b[2]);
 }
 double dot(const Vector& a, const Vector& b) {
 	return a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
@@ -83,6 +92,41 @@ double min(const Vector& a){
 	return std::min(std::min(a[0], a[1]), a[2]);
 }
 
+double max(const Vector& a){
+	return std::max(std::max(a[0], a[1]), a[2]);
+}
+
+double max_idx(const Vector& a){
+	int idx = 0;
+	for (size_t i = 0; i < 3; i++){
+		if (a[i] > a[idx]){
+			idx = i;
+		}
+	}
+	return idx;
+}
+
+class Ray {
+public:
+	Ray(const Vector& O, const Vector& u) : O(O), u(u) {};
+	Vector O;
+	Vector u;
+};
+double sqr(double x){
+	return x*x;
+};
+
+
+class Geometry{
+public:
+	virtual bool intersect(const Ray& r, Vector& P, Vector& N, double& t) const = 0;
+	Vector rho;
+	bool is_reflective;
+	bool is_refractive;
+	bool hollow;
+};
+
+
 class TriangleIndices {
 public:
     TriangleIndices(int vtxi = -1, int vtxj = -1, int vtxk = -1, int ni = -1, int nj = -1, int nk = -1, int uvi = -1, int uvj = -1, int uvk = -1, int group = -1, bool added = false) : vtxi(vtxi), vtxj(vtxj), vtxk(vtxk), uvi(uvi), uvj(uvj), uvk(uvk), ni(ni), nj(nj), nk(nk), group(group) {
@@ -93,11 +137,173 @@ public:
     int group;       // face group
 };
  
+
+class BoundingBox {
+	public:
+		Vector Bmin;
+		Vector Bmax;
+		BoundingBox(){}
+		BoundingBox(const Vector& Bmin, const Vector& Bmax): Bmin(Bmin), Bmax(Bmax) {};
+		bool intersect(const Ray& r, double& inter_distance) const{
+			Vector X = (Bmin - r.O) / r.u;
+			Vector Y = (Bmax - r.O) / r.u;
+
+			Vector t0(std::min(X[0], Y[0]), std::min(X[1], Y[1]), std::min(X[2], Y[2]));
+			Vector t1(std::max(X[0], Y[0]), std::max(X[1], Y[1]), std::max(X[2], Y[2]));
+			
+			if(min(t1) > max(t0) && max(t0) > 0){
+				inter_distance = max(t0);
+				return true;
+			}
+			return false;
+		}
+ };
+
+ class Node{
+	public:
+		int begin;
+		int end;
+		BoundingBox bbox;
+		Node* left;
+		Node* right;
+};
+
  
-class TriangleMesh {
+class TriangleMesh : public Geometry{
 public:
-  ~TriangleMesh() {}
-    TriangleMesh() {};
+  	~TriangleMesh() {}
+	std::vector<TriangleIndices> indices;
+    std::vector<Vector> vertices;
+    std::vector<Vector> normals;
+    std::vector<Vector> uvs;
+    std::vector<Vector> vertexcolors;
+	BoundingBox bbox;
+	Node* root;
+	
+    TriangleMesh(const Vector& rho, bool is_reflective = false, bool is_refractive = false, bool hollow = false){
+		this->rho = rho;
+		this->is_reflective = is_reflective;
+		this->is_refractive = is_refractive;
+		this->hollow = hollow;
+	}
+
+	BoundingBox set_bbox(int begin, int end)
+	{
+		double x_min = DBL_MAX;
+		double y_min = DBL_MAX;
+		double z_min = DBL_MAX;
+		double x_max = -DBL_MAX;
+		double y_max = -DBL_MAX;
+		double z_max = -DBL_MAX;
+		for (int i = begin; i < end; i++)
+        {
+			auto vertices_tmp = {vertices[indices[i].vtxi], vertices[indices[i].vtxj], vertices[indices[i].vtxk]};
+			for(const auto& vertex: vertices_tmp){
+				x_min = std::min(x_min, vertex[0]);
+				y_min = std::min(y_min, vertex[1]);
+				z_min = std::min(z_min, vertex[2]);
+				x_max = std::max(x_max, vertex[0]);
+				y_max = std::max(y_max, vertex[1]);
+				z_max = std::max(z_max, vertex[2]);
+
+			}
+        }
+		Vector Bmin(x_min, y_min, z_min);
+		Vector Bmax(x_max, y_max, z_max);
+		BoundingBox bbox(Bmin, Bmax);
+		return bbox;
+	}
+
+	void bvh(Node *node, int begin, int end)
+    {
+
+        BoundingBox bbox = set_bbox(begin, end);
+        node->bbox = bbox;
+        node->begin = begin;
+        node->end = end;
+
+
+        Vector diag = node->bbox.Bmin - node->bbox.Bmax;
+        Vector middle_diag = node->bbox.Bmin + diag * 0.5;
+
+
+        int longest_axis = max_idx(diag);
+        int pivot_index = begin;
+        for (int i = begin; i < end; i++)
+        {
+            Vector barycenter = (vertices[indices[i].vtxi] + vertices[indices[i].vtxj] + vertices[indices[i].vtxk]) / 3;
+
+            if (barycenter[longest_axis] < middle_diag[longest_axis])
+            {
+                std::swap(indices[i], indices[pivot_index]);
+                pivot_index++;
+            }
+        }
+
+        if (pivot_index <= begin|| pivot_index >= (end - 1) || (end - begin) < 5 ) return ;
+
+        node->left = new Node();
+        node->right = new Node();
+        bvh(node->left, begin, pivot_index);
+        bvh(node->right, pivot_index, end);
+    }
+
+	bool intersect(const Ray& r, Vector& P, Vector& N, double& t) const{
+		double inter_distance = 0.0;
+		if(!root->bbox.intersect(r, inter_distance)) return false;
+
+		t = DBL_MAX;		
+		bool intersection = false;
+		std::list<Node*> nodes_to_visit;
+		nodes_to_visit.push_front(root);
+		double best_inter_distance = std::numeric_limits<double >::max();
+		while(!nodes_to_visit.empty()){
+			Node* curNode = nodes_to_visit.back();
+			nodes_to_visit.pop_back();
+			// if there is one child , then it is not a leaf , so test the bounding box
+			if( curNode->left ) {
+				if (curNode->left->bbox.intersect(r, inter_distance)) {
+					if(inter_distance < best_inter_distance) { 
+						nodes_to_visit.push_back(curNode->left);
+					} 
+			}
+				if (curNode->right->bbox.intersect(r, inter_distance)) { 
+					if(inter_distance < best_inter_distance) {
+						nodes_to_visit.push_back(curNode->right) ; 
+					}
+				} 
+			} else {
+				for(int i = curNode->begin; i < curNode->end; i++){
+					TriangleIndices triangle = indices[i];
+					Vector A = vertices[triangle.vtxi];
+					Vector B = vertices[triangle.vtxj];
+					Vector C = vertices[triangle.vtxk];
+
+					Vector e1 = B - A;
+					Vector e2 = C - A;
+
+					Vector N_cur = cross(e1, e2);
+
+					double t_cur = dot(A - r.O, r.u)/ dot(r.u, N_cur);
+
+					if (t_cur > 0 && t_cur < t){
+						N = N_cur;
+						double beta = dot(e2, cross(A - r.O, r.u))/ dot(r.u, N);
+						double gamma = -dot(e1, cross(A - r.O, r.u))/ dot(r.u, N);
+						double alpha = 1 - beta - gamma;
+						if (beta > 0 && beta < 1 && gamma > 0 && gamma < 1 && alpha > 0 && alpha < 1){
+							N.normalize();
+							t = t_cur;
+							P = A + beta * e1 +  gamma * e2;
+							intersection = true;
+						}
+					}
+				}
+			}
+		}
+		// std::cout << intersection;
+		return intersection;
+	}
     
     void readOBJ(const char* obj) {
  
@@ -107,6 +313,7 @@ public:
         FILE* f;
         f = fopen(obj, "r");
         int curGroup = -1;
+		std::cout<< 1;
         while (!feof(f)) {
             char line[255];
             if (!fgets(line, 255, f)) break;
@@ -269,15 +476,20 @@ public:
             }
  
         }
+		// Scale and translate
+		double scale = 0.6;
+		Vector translation(0,-10,0);
+		for (size_t i = 0; i < vertices.size(); i++)
+		{
+				vertices[i] = vertices[i] * scale + translation;
+		}
+		// Allocate memory for root
+    	root = new Node();
+		// Run the bvh
+		bvh(root, 0, indices.size());
         fclose(f);
  
     }
- 
-    std::vector<TriangleIndices> indices;
-    std::vector<Vector> vertices;
-    std::vector<Vector> normals;
-    std::vector<Vector> uvs;
-    std::vector<Vector> vertexcolors;
     
 };
 
@@ -301,28 +513,22 @@ Vector random_cos(Vector& N){
 	Vector V = x * T1 + y * T2 + z * N;
 	return V;
 }
-class Ray {
-public:
-	Ray(const Vector& O, const Vector& u) : O(O), u(u) {};
-	Vector O;
-	Vector u;
-};
-double sqr(double x){
-	return x*x;
-};
 
-class Sphere {
+
+class Sphere : public Geometry{
 public:
-	Sphere(const Vector& C, double R, const Vector& rho, bool is_reflective = false, bool is_refractive = false, bool hollow = false):
-	C(C), R(R), rho(rho), is_reflective(is_reflective), is_refractive(is_refractive), hollow(hollow){};
 	Vector C;
 	double R;
-	Vector rho;
-	bool is_reflective;
-	bool is_refractive;
-	bool hollow;
+	Sphere(Vector C, double R, Vector rho, bool is_reflective = false, bool is_refractive = false, bool hollow = false){
+		this->C = C;
+		this->R = R;
+		this->rho = rho;
+		this->is_reflective = is_reflective;
+		this->is_refractive = is_refractive;
+		this->hollow = hollow;
+	}
 
-	bool intersect(const Ray& r, Vector& P, Vector& N, double& t) const {
+	bool intersect(const Ray& r, Vector& P, Vector& N, double& t) const{
 		double delta = sqr(dot(r.u, r.O - C)) - (r.O - C, r.O - C).norm2() + sqr(R);
 		if (delta < 0){return false;}
 		else{
@@ -351,10 +557,10 @@ public:
 	bool intersect(const Ray& r, Vector& P, Vector& N, double& t, size_t& sphere_idx){
 		t = DBL_MAX;
 		bool res = false;
-		for(int i = 0; i < objects.size(); i++){
+		for(size_t i = 0; i < objects.size(); i++){
 			double t_tmp;
 			Vector P_tmp, N_tmp;
-			if(objects[i].intersect(r, P_tmp, N_tmp, t_tmp)){
+			if(objects[i]->intersect(r, P_tmp, N_tmp, t_tmp)){
 				if(t_tmp < t){
 					P = P_tmp;
 					N = N_tmp;
@@ -381,12 +587,12 @@ public:
 		Vector L(0,0,0);
 		if(intersect(r, P, N, t, sphere_idx)){
 
-			if (objects[sphere_idx].is_reflective){
+			if (objects[sphere_idx]->is_reflective){
 				Vector w_r = r.u - 2 * dot(r.u, N) * N;
 				Ray reflection_ray(P + eps * N, w_r);
 				return get_color(reflection_ray, ray_depth - 1);
 			}
-			if (objects[sphere_idx].is_refractive){
+			if (objects[sphere_idx]->is_refractive){
 				double n1 = 1.0;
 				double n2 = 1.5;
 				Vector Ntmp = N;
@@ -423,20 +629,19 @@ public:
 					visible  = false;
 				}
 			}
-			L = I / (4 * M_PI * sqr(d)) * int(visible) * objects[sphere_idx].rho / M_PI * (std::max(0., dot(N, w_i)));
+			L = I / (4 * M_PI * sqr(d)) * int(visible) * objects[sphere_idx]->rho / M_PI * (std::max(0., dot(N, w_i)));
 
-			// Vector V = random_cos(N);
-			// Ray random_ray(P + eps * N, V);
-			// L = L + objects[sphere_idx].rho * get_color(random_ray, ray_depth - 1);
-
+			Vector V = random_cos(N);
+			Ray random_ray(P + eps * N, V);
+			L = L + objects[sphere_idx]->rho * get_color(random_ray, ray_depth - 1);
 		}
 		return L;
 
 	}
-	void add_sphere(const Sphere& s) {
-		objects.push_back(s);
+	void add_object(Geometry* geo) {
+		objects.push_back(geo);
 	}
-	std::vector<Sphere> objects;
+	std::vector<Geometry* > objects;
 };
 
 
@@ -450,38 +655,42 @@ void boxMuller(double stdev , double &x, double &y) {
 int main() {
 	int W = 512;
 	int H = 512;
-	bool frensel = true;
+	//Sphere* sphere1 = new Sphere(Vector(0, 0, 0), 10, Vector(1, 1, 1), false, true);
+	// Sphere sphere2(Vector(-20, 0, 0), 10, Vector(1, 1, 1), true);
+	// Sphere sphere3(Vector(20, 0, 0), 10, Vector(1, 1, 1), false, true);
+	// Sphere sphere3b(Vector(20, 0, 0), 9.5, Vector(1, 1, 1), false, true, true);
+	Sphere* ceiling = new Sphere(Vector(0, 1000, 0), 940, Vector(1, 0, 0));
+	Sphere* floor = new Sphere(Vector(0, -1000, 0), 990, Vector(0, 0, 1));
+	Sphere* front = new Sphere(Vector(0, 0, -1000), 940, Vector(0, 1, 0));
+	Sphere* back = new Sphere(Vector(0, 0, 1000), 940, Vector(1, 0, 0.5));
+	Sphere* left = new Sphere(Vector(-1000, 0, 0), 940, Vector(1, 1, 0));
+	Sphere* right = new Sphere(Vector(1000, 0, 0), 940, Vector(0, 1, 1));
 
-	Sphere sphere1(Vector(0, 0, 0), 10, Vector(1, 1, 1), false, true);
-	Sphere sphere2(Vector(-20, 0, 0), 10, Vector(1, 1, 1), true);
-	Sphere sphere3(Vector(20, 0, 0), 10, Vector(1, 1, 1), false, true);
-	Sphere sphere3b(Vector(20, 0, 0), 9.5, Vector(1, 1, 1), false, true, true);
-	Sphere ceiling(Vector(0, 1000, 0), 940, Vector(1, 0, 0));
-	Sphere floor(Vector(0, -1000, 0), 990, Vector(0, 0, 1));
-	Sphere front(Vector(0, 0, -1000), 940, Vector(0, 1, 0));
-	Sphere back(Vector(0, 0, 1000), 940, Vector(1, 0, 0.5));
-	Sphere left(Vector(-1000, 0, 0), 940, Vector(1, 1, 0));
-	Sphere right(Vector(1000, 0, 0), 940, Vector(0, 1, 1));
+	TriangleMesh* cat = new TriangleMesh(Vector(1, 1, 1));
+	cat->readOBJ("models/cat.obj");
 	Vector camera_center(0, 0, 55);
 	const double alpha = 60.*M_PI/180.;
 	const double I = 2E10;
-	const int K = 1000;
+	const int K = 10;
 	Vector S(-10, 20, 40);
 	Scene scene(S, I);
-	scene.add_sphere(sphere1);
-	scene.add_sphere(sphere2);
-	scene.add_sphere(sphere3);
-	scene.add_sphere(sphere3b);
-	scene.add_sphere(ceiling);
-	scene.add_sphere(floor);
-	scene.add_sphere(front);
-	scene.add_sphere(back);
-	scene.add_sphere(left);
-	scene.add_sphere(right);
+	
+	//scene.add_object(sphere1);
+	// scene.add_object(sphere2);
+	// scene.add_object(sphere3);
+	// scene.add_object(sphere3b);
+	scene.add_object(ceiling);
+	scene.add_object(floor);
+	scene.add_object(front);
+	scene.add_object(back);
+	scene.add_object(left);
+	scene.add_object(right);
+
+	scene.add_object(cat);
 
 	std::vector<unsigned char> image(W * H * 3, 0);
-
-	#pragma omp parallel for or schedule(dynamic, 1)
+	
+	#pragma omp parallel for
 	for (int i = 0; i < H; i++) {
 		for (int j = 0; j < W; j++) {
 

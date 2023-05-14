@@ -62,6 +62,10 @@
         "__verbose_abort": "cpp",
         "algorithm": "cpp",
         "iomanip": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "thread": "cpp",
+        "numeric": "cpp",
+        "random": "cpp",
+        "list": "cpp"
     }
 }
