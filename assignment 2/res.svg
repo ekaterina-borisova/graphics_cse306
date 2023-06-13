@@ -1,0 +1,1028 @@
+<svg xmlns = "http://www.w3.org/2000/svg" width = "1000" height = "1000">
+<g>
+<g>
+<polygon points = "270.237, 637.057 208.995, 1000.000 0.000, 1000.000 0.000, 600.777 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "646.272, 524.580 554.465, 434.442 579.511, 395.808 741.048, 315.558 771.645, 321.822 "
+fill = "none" stroke = "black"/>
+<polygon points = "454.247, 1.968 0.000, 21.509 0.000, 0.000 453.451, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "771.645, 321.822 741.048, 315.558 585.465, 204.739 454.247, 1.968 453.451, 0.000 1000.000, 0.000 1000.000, 283.345 "
+fill = "none" stroke = "black"/>
+<polygon points = "585.465, 204.739 741.048, 315.558 579.511, 395.808 "
+fill = "none" stroke = "black"/>
+<polygon points = "686.392, 1000.000 634.321, 690.336 646.272, 524.580 771.645, 321.822 1000.000, 283.345 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "585.465, 204.739 579.511, 395.808 554.465, 434.442 270.237, 637.057 0.000, 600.777 0.000, 21.509 454.247, 1.968 "
+fill = "none" stroke = "black"/>
+<polygon points = "634.321, 690.336 686.392, 1000.000 570.669, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "634.321, 690.336 570.669, 1000.000 208.995, 1000.000 270.237, 637.057 554.465, 434.442 646.272, 524.580 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame0"
+    attributeName = "display"
+    values = "inline;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "305.082, 196.385 388.489, 703.448 338.435, 1000.000 0.000, 1000.000 0.000, 155.633 "
+fill = "none" stroke = "black"/>
+<polygon points = "896.297, 52.501 1000.000, 35.795 1000.000, 148.896 "
+fill = "none" stroke = "black"/>
+<polygon points = "420.339, 734.746 388.489, 703.448 305.082, 196.385 348.633, 129.086 470.819, 0.000 639.287, 0.000 896.297, 52.501 1000.000, 148.896 1000.000, 354.145 "
+fill = "none" stroke = "black"/>
+<polygon points = "348.633, 129.086 0.000, 143.781 0.000, 0.000 470.819, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "896.297, 52.501 639.287, 0.000 1000.000, 0.000 1000.000, 35.795 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "348.633, 129.086 305.082, 196.385 0.000, 155.633 0.000, 143.781 "
+fill = "none" stroke = "black"/>
+<polygon points = "366.446, 1000.000 420.339, 734.746 1000.000, 354.145 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "420.339, 734.746 366.446, 1000.000 338.435, 1000.000 388.489, 703.448 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame1"
+    attributeName = "display"
+    values = "none;inline;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "307.766, 194.994 390.307, 692.656 339.130, 1000.000 0.000, 1000.000 0.000, 154.536 "
+fill = "none" stroke = "black"/>
+<polygon points = "894.000, 52.383 1000.000, 35.509 1000.000, 150.678 "
+fill = "none" stroke = "black"/>
+<polygon points = "421.999, 723.844 390.307, 692.656 307.766, 194.994 351.125, 128.095 471.173, 0.000 637.954, 0.000 894.000, 52.383 1000.000, 150.678 1000.000, 344.265 "
+fill = "none" stroke = "black"/>
+<polygon points = "351.125, 128.095 0.000, 147.766 0.000, 0.000 471.173, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "894.000, 52.383 637.954, 0.000 1000.000, 0.000 1000.000, 35.509 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "351.125, 128.095 307.766, 194.994 0.000, 154.536 0.000, 147.766 "
+fill = "none" stroke = "black"/>
+<polygon points = "365.991, 1000.000 421.999, 723.844 1000.000, 344.265 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "421.999, 723.844 365.991, 1000.000 339.130, 1000.000 390.307, 692.656 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame2"
+    attributeName = "display"
+    values = "none;none;inline;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "306.937, 196.125 389.957, 690.110 339.945, 1000.000 0.000, 1000.000 0.000, 156.279 "
+fill = "none" stroke = "black"/>
+<polygon points = "895.123, 54.098 1000.000, 37.884 1000.000, 150.897 "
+fill = "none" stroke = "black"/>
+<polygon points = "420.121, 719.854 389.957, 690.110 306.937, 196.125 362.044, 111.524 464.494, 0.000 632.083, 0.000 895.123, 54.098 1000.000, 150.897 1000.000, 339.655 "
+fill = "none" stroke = "black"/>
+<polygon points = "362.044, 111.524 0.000, 143.120 0.000, 0.000 464.494, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "895.123, 54.098 632.083, 0.000 1000.000, 0.000 1000.000, 37.884 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "362.044, 111.524 306.937, 196.125 0.000, 156.279 0.000, 143.120 "
+fill = "none" stroke = "black"/>
+<polygon points = "362.852, 1000.000 420.121, 719.854 1000.000, 339.655 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "420.121, 719.854 362.852, 1000.000 339.945, 1000.000 389.957, 690.110 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame3"
+    attributeName = "display"
+    values = "none;none;none;inline;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "308.439, 194.897 391.003, 676.593 341.324, 1000.000 0.000, 1000.000 0.000, 155.781 "
+fill = "none" stroke = "black"/>
+<polygon points = "897.831, 53.187 1000.000, 38.134 1000.000, 146.825 "
+fill = "none" stroke = "black"/>
+<polygon points = "422.607, 707.838 391.003, 676.593 308.439, 194.897 376.150, 91.826 457.976, 0.000 641.528, 0.000 897.831, 53.187 1000.000, 146.825 1000.000, 330.550 "
+fill = "none" stroke = "black"/>
+<polygon points = "376.150, 91.826 0.000, 145.310 0.000, 0.000 457.976, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "897.831, 53.187 641.528, 0.000 1000.000, 0.000 1000.000, 38.134 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "376.150, 91.826 308.439, 194.897 0.000, 155.781 0.000, 145.310 "
+fill = "none" stroke = "black"/>
+<polygon points = "361.813, 1000.000 422.607, 707.838 1000.000, 330.550 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "422.607, 707.838 361.813, 1000.000 341.324, 1000.000 391.003, 676.593 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame4"
+    attributeName = "display"
+    values = "none;none;none;none;inline;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+</g>
+</svg>
+<g>
+<polygon points = "78.068, 141.125 312.024, 170.172 389.571, 611.158 334.129, 1000.000 0.000, 1000.000 0.000, 137.490 "
+fill = "none" stroke = "black"/>
+<polygon points = "1000.000, 6.922 1000.000, 6.922 1000.000, 6.922 "
+fill = "none" stroke = "black"/>
+<polygon points = "477.483, 698.363 389.571, 611.158 312.024, 170.172 378.103, 70.807 414.465, 28.271 477.048, 0.000 967.063, 0.000 1000.000, 6.922 1000.000, 6.922 1000.000, 358.506 "
+fill = "none" stroke = "black"/>
+<polygon points = "414.465, 28.271 378.103, 70.807 78.068, 141.125 0.000, 137.490 0.000, 0.000 423.452, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "1000.000, 6.922 967.063, 0.000 1000.000, 0.000 1000.000, 6.922 "
+fill = "none" stroke = "black"/>
+<polygon points = "414.465, 28.271 423.452, 0.000 477.048, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "378.103, 70.807 312.024, 170.172 78.068, 141.125 "
+fill = "none" stroke = "black"/>
+<polygon points = "412.975, 1000.000 477.483, 698.363 1000.000, 358.506 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "477.483, 698.363 412.975, 1000.000 334.129, 1000.000 389.571, 611.158 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame5"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "450.907, 85.985 491.738, 311.359 374.546, 1000.000 0.000, 1000.000 0.000, 72.312 "
+fill = "none" stroke = "black"/>
+<polygon points = "741.513, 154.354 622.084, 47.166 1000.000, 0.181 1000.000, 204.807 "
+fill = "none" stroke = "black"/>
+<polygon points = "491.738, 311.359 450.907, 85.985 503.620, 21.803 622.084, 47.166 741.513, 154.354 "
+fill = "none" stroke = "black"/>
+<polygon points = "503.620, 21.803 450.907, 85.985 0.000, 72.312 0.000, 0.000 493.370, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "622.084, 47.166 503.620, 21.803 493.370, 0.000 1000.000, 0.000 1000.000, 0.181 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "374.546, 1000.000 491.738, 311.359 741.513, 154.354 1000.000, 204.807 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame6"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "441.146, 188.375 350.332, 1000.000 0.000, 1000.000 0.000, 137.149 "
+fill = "none" stroke = "black"/>
+<polygon points = "761.879, 99.468 753.942, 92.537 819.456, 86.839 "
+fill = "none" stroke = "black"/>
+<polygon points = "682.302, 231.750 558.426, 107.858 649.858, 69.678 753.942, 92.537 761.879, 99.468 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "819.456, 86.839 753.942, 92.537 649.858, 69.678 554.205, 0.511 553.871, 0.000 1000.000, 0.000 1000.000, 60.335 "
+fill = "none" stroke = "black"/>
+<polygon points = "554.574, 107.820 554.205, 0.511 649.858, 69.678 558.426, 107.858 "
+fill = "none" stroke = "black"/>
+<polygon points = "615.671, 1000.000 682.302, 231.750 761.879, 99.468 819.456, 86.839 1000.000, 60.335 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "554.205, 0.511 554.574, 107.820 441.146, 188.375 0.000, 137.149 0.000, 0.000 553.871, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "615.671, 1000.000 350.332, 1000.000 441.146, 188.375 554.574, 107.820 558.426, 107.858 682.302, 231.750 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame7"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "458.753, 125.487 462.939, 129.207 520.550, 422.758 432.601, 1000.000 0.000, 1000.000 0.000, 127.633 "
+fill = "none" stroke = "black"/>
+<polygon points = "822.238, 226.983 628.589, 63.348 639.829, 27.931 1000.000, 9.903 1000.000, 180.966 "
+fill = "none" stroke = "black"/>
+<polygon points = "809.798, 248.038 520.550, 422.758 462.939, 129.207 628.589, 63.348 822.238, 226.983 "
+fill = "none" stroke = "black"/>
+<polygon points = "458.753, 125.487 0.000, 127.633 0.000, 0.000 479.718, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "639.829, 27.931 601.297, 0.000 1000.000, 0.000 1000.000, 9.903 "
+fill = "none" stroke = "black"/>
+<polygon points = "639.829, 27.931 628.589, 63.348 462.939, 129.207 458.753, 125.487 479.718, 0.000 601.297, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "904.677, 1000.000 809.798, 248.038 822.238, 226.983 1000.000, 180.966 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "904.677, 1000.000 432.601, 1000.000 520.550, 422.758 809.798, 248.038 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame8"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "413.368, 101.652 466.939, 146.458 545.282, 494.164 478.030, 1000.000 0.000, 1000.000 0.000, 102.350 "
+fill = "none" stroke = "black"/>
+<polygon points = "880.672, 155.644 782.970, 75.950 1000.000, 72.780 1000.000, 119.545 "
+fill = "none" stroke = "black"/>
+<polygon points = "756.854, 370.217 545.282, 494.164 466.939, 146.458 703.601, 57.680 782.970, 75.950 880.672, 155.644 "
+fill = "none" stroke = "black"/>
+<polygon points = "413.368, 101.652 0.000, 102.350 0.000, 0.000 425.927, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "782.970, 75.950 703.601, 57.680 624.207, 0.000 1000.000, 0.000 1000.000, 72.780 "
+fill = "none" stroke = "black"/>
+<polygon points = "703.601, 57.680 466.939, 146.458 413.368, 101.652 425.927, 0.000 624.207, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "835.698, 1000.000 756.854, 370.217 880.672, 155.644 1000.000, 119.545 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "835.698, 1000.000 478.030, 1000.000 545.282, 494.164 756.854, 370.217 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame9"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "401.636, 157.855 446.611, 321.000 455.707, 1000.000 0.000, 1000.000 0.000, 163.078 "
+fill = "none" stroke = "black"/>
+<polygon points = "989.273, 28.084 1000.000, 28.336 1000.000, 36.472 "
+fill = "none" stroke = "black"/>
+<polygon points = "639.378, 511.086 446.611, 321.000 401.636, 157.855 513.981, 0.000 868.046, 0.000 989.273, 28.084 1000.000, 36.472 1000.000, 317.599 "
+fill = "none" stroke = "black"/>
+<polygon points = "401.636, 157.855 0.000, 163.078 0.000, 0.000 513.981, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "989.273, 28.084 868.046, 0.000 1000.000, 0.000 1000.000, 28.336 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "515.492, 1000.000 639.378, 511.086 1000.000, 317.599 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "515.492, 1000.000 455.707, 1000.000 446.611, 321.000 639.378, 511.086 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame10"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "437.255, 295.568 488.401, 387.650 455.971, 1000.000 0.000, 1000.000 0.000, 296.860 "
+fill = "none" stroke = "black"/>
+<polygon points = "488.401, 387.650 437.255, 295.568 508.112, 1.884 1000.000, 32.773 1000.000, 450.467 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "508.112, 1.884 437.255, 295.568 0.000, 296.860 0.000, 0.000 506.989, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "508.112, 1.884 506.989, 0.000 1000.000, 0.000 1000.000, 32.773 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "455.971, 1000.000 488.401, 387.650 1000.000, 450.467 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame11"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "504.613, 411.070 597.088, 476.773 676.680, 1000.000 0.000, 1000.000 0.000, 370.604 "
+fill = "none" stroke = "black"/>
+<polygon points = "766.356, 478.623 1000.000, 140.255 1000.000, 367.882 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "994.379, 0.000 1000.000, 0.000 1000.000, 4.121 "
+fill = "none" stroke = "black"/>
+<polygon points = "766.356, 478.623 764.259, 480.267 597.088, 476.773 504.613, 411.070 488.439, 0.000 994.379, 0.000 1000.000, 4.121 1000.000, 140.255 "
+fill = "none" stroke = "black"/>
+<polygon points = "707.659, 1000.000 764.259, 480.267 766.356, 478.623 1000.000, 367.882 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "504.613, 411.070 0.000, 370.604 0.000, 0.000 488.439, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "707.659, 1000.000 676.680, 1000.000 597.088, 476.773 764.259, 480.267 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame12"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "724.056, 1000.000 0.000, 1000.000 0.000, 368.202 729.117, 419.437 745.753, 448.990 "
+fill = "none" stroke = "black"/>
+<polygon points = "859.224, 458.340 745.753, 448.990 729.117, 419.437 805.431, 157.957 818.363, 142.813 1000.000, 168.287 1000.000, 380.897 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "818.363, 142.813 803.735, 132.067 714.991, 0.000 1000.000, 0.000 1000.000, 168.287 "
+fill = "none" stroke = "black"/>
+<polygon points = "803.735, 132.067 818.363, 142.813 805.431, 157.957 "
+fill = "none" stroke = "black"/>
+<polygon points = "887.936, 1000.000 859.224, 458.340 1000.000, 380.897 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "803.735, 132.067 805.431, 157.957 729.117, 419.437 0.000, 368.202 0.000, 0.000 714.991, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "887.936, 1000.000 724.056, 1000.000 745.753, 448.990 859.224, 458.340 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame13"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "690.219, 1000.000 0.000, 1000.000 0.000, 268.953 591.110, 254.339 "
+fill = "none" stroke = "black"/>
+<polygon points = "979.143, 497.930 623.700, 239.637 879.601, 0.000 999.919, 0.000 1000.000, 0.014 1000.000, 484.775 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "608.210, 239.200 591.110, 254.339 0.000, 268.953 0.000, 0.000 569.431, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "999.919, 0.000 1000.000, 0.000 1000.000, 0.014 "
+fill = "none" stroke = "black"/>
+<polygon points = "623.700, 239.637 608.210, 239.200 569.431, 0.000 879.601, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "919.014, 1000.000 979.143, 497.930 1000.000, 484.775 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "919.014, 1000.000 690.219, 1000.000 591.110, 254.339 608.210, 239.200 623.700, 239.637 979.143, 497.930 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame14"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "715.833, 258.885 853.405, 642.732 862.944, 750.021 856.688, 1000.000 0.000, 1000.000 0.000, 221.550 655.944, 215.816 "
+fill = "none" stroke = "black"/>
+<polygon points = "757.507, 244.670 1000.000, 65.834 1000.000, 338.454 "
+fill = "none" stroke = "black"/>
+<polygon points = "873.984, 661.650 853.405, 642.732 715.833, 258.885 757.507, 244.670 1000.000, 338.454 1000.000, 483.173 "
+fill = "none" stroke = "black"/>
+<polygon points = "655.944, 215.816 0.000, 221.550 0.000, 0.000 606.231, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "999.998, 0.000 1000.000, 0.000 1000.000, 0.001 "
+fill = "none" stroke = "black"/>
+<polygon points = "757.507, 244.670 715.833, 258.885 655.944, 215.816 606.231, 0.000 999.998, 0.000 1000.000, 0.001 1000.000, 65.834 "
+fill = "none" stroke = "black"/>
+<polygon points = "856.688, 1000.000 862.944, 750.021 873.984, 661.650 1000.000, 483.173 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "862.944, 750.021 853.405, 642.732 873.984, 661.650 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame15"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "319.533, 400.819 392.009, 1000.000 0.000, 1000.000 0.000, 410.091 "
+fill = "none" stroke = "black"/>
+<polygon points = "971.807, 385.086 600.479, 154.735 623.339, 95.680 794.037, 0.000 1000.000, 0.000 1000.000, 383.276 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "469.691, 253.917 319.533, 400.819 0.000, 410.091 0.000, 1.656 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "623.339, 95.680 608.343, 0.000 794.037, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "623.339, 95.680 600.479, 154.735 469.691, 253.917 0.000, 1.656 0.000, 0.000 608.343, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "774.120, 1000.000 971.807, 385.086 1000.000, 383.276 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "774.120, 1000.000 392.009, 1000.000 319.533, 400.819 469.691, 253.917 600.479, 154.735 971.807, 385.086 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame16"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "218.905, 169.978 438.849, 577.699 424.138, 1000.000 0.000, 1000.000 0.000, 160.718 "
+fill = "none" stroke = "black"/>
+<polygon points = "438.849, 577.699 218.905, 169.978 241.661, 117.013 528.589, 0.000 992.055, 0.000 1000.000, 2.230 1000.000, 48.568 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "992.055, 0.000 1000.000, 0.000 1000.000, 2.230 "
+fill = "none" stroke = "black"/>
+<polygon points = "241.661, 117.013 219.583, 0.000 528.589, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "424.138, 1000.000 438.849, 577.699 1000.000, 48.568 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "241.661, 117.013 218.905, 169.978 0.000, 160.718 0.000, 0.000 219.583, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame17"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "248.863, 175.919 351.018, 245.816 518.034, 672.983 515.680, 828.036 510.090, 1000.000 0.000, 1000.000 0.000, 186.293 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "518.034, 672.983 351.018, 245.816 1000.000, 29.121 1000.000, 75.022 "
+fill = "none" stroke = "black"/>
+<polygon points = "248.863, 175.919 0.000, 186.293 0.000, 0.000 163.528, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "351.018, 245.816 248.863, 175.919 163.528, 0.000 1000.000, 0.000 1000.000, 29.121 "
+fill = "none" stroke = "black"/>
+<polygon points = "519.595, 1000.000 515.680, 828.036 518.034, 672.983 1000.000, 75.022 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "519.595, 1000.000 510.090, 1000.000 515.680, 828.036 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame18"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "135.037, 68.625 372.460, 234.784 520.598, 642.736 507.227, 1000.000 0.000, 1000.000 0.000, 70.407 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "520.598, 642.736 372.460, 234.784 1000.000, 35.170 1000.000, 77.389 "
+fill = "none" stroke = "black"/>
+<polygon points = "135.037, 68.625 0.000, 70.407 0.000, 0.000 93.984, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "372.460, 234.784 135.037, 68.625 93.984, 0.000 1000.000, 0.000 1000.000, 35.170 "
+fill = "none" stroke = "black"/>
+<polygon points = "507.227, 1000.000 520.598, 642.736 1000.000, 77.389 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame19"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "690.043, 640.050 826.710, 993.659 827.218, 1000.000 0.000, 1000.000 0.000, 680.471 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "834.232, 1000.000 826.710, 993.659 690.043, 640.050 749.930, 337.929 904.670, 57.999 1000.000, 81.894 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "749.930, 337.929 690.043, 640.050 0.000, 680.471 0.000, 253.592 "
+fill = "none" stroke = "black"/>
+<polygon points = "904.670, 57.999 860.037, 0.000 1000.000, 0.000 1000.000, 81.894 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "904.670, 57.999 749.930, 337.929 0.000, 253.592 0.000, 0.000 860.037, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "834.232, 1000.000 827.218, 1000.000 826.710, 993.659 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame20"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "789.692, 477.702 808.036, 1000.000 0.000, 1000.000 0.000, 495.213 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "815.515, 435.700 842.982, 219.861 881.485, 149.579 1000.000, 180.550 1000.000, 583.515 "
+fill = "none" stroke = "black"/>
+<polygon points = "842.982, 219.861 815.515, 435.700 789.692, 477.702 0.000, 495.213 0.000, 198.307 "
+fill = "none" stroke = "black"/>
+<polygon points = "881.485, 149.579 763.607, 0.000 1000.000, 0.000 1000.000, 180.550 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "881.485, 149.579 842.982, 219.861 0.000, 198.307 0.000, 0.000 763.607, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "808.036, 1000.000 789.692, 477.702 815.515, 435.700 1000.000, 583.515 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame21"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "0.000, 1000.000 0.000, 11.930 483.213, 0.000 627.586, 0.000 772.688, 95.342 1000.000, 691.633 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "772.688, 95.342 817.166, 86.334 1000.000, 137.218 1000.000, 691.633 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "817.166, 86.334 699.210, 0.000 1000.000, 0.000 1000.000, 137.218 "
+fill = "none" stroke = "black"/>
+<polygon points = "817.166, 86.334 772.688, 95.342 627.586, 0.000 699.210, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "0.000, 11.930 0.000, 0.000 483.213, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame22"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "815.100, 1000.000 0.000, 1000.000 0.000, 252.966 763.140, 218.371 776.947, 227.664 811.430, 327.874 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "811.430, 327.874 776.947, 227.664 1000.000, 194.453 1000.000, 451.477 "
+fill = "none" stroke = "black"/>
+<polygon points = "646.145, 114.152 763.140, 218.371 0.000, 252.966 0.000, 133.135 "
+fill = "none" stroke = "black"/>
+<polygon points = "775.987, 0.000 1000.000, 0.000 1000.000, 163.750 "
+fill = "none" stroke = "black"/>
+<polygon points = "776.947, 227.664 763.140, 218.371 646.145, 114.152 599.534, 0.000 775.987, 0.000 1000.000, 163.750 1000.000, 194.453 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "646.145, 114.152 0.000, 133.135 0.000, 0.000 599.534, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "815.100, 1000.000 811.430, 327.874 1000.000, 451.477 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame23"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "886.371, 1000.000 0.000, 1000.000 0.000, 565.266 867.678, 371.908 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "881.854, 306.821 870.021, 231.242 940.071, 224.439 1000.000, 243.234 1000.000, 373.304 "
+fill = "none" stroke = "black"/>
+<polygon points = "673.266, 74.441 870.021, 231.242 881.854, 306.821 867.678, 371.908 0.000, 565.266 0.000, 85.971 "
+fill = "none" stroke = "black"/>
+<polygon points = "940.071, 224.439 642.650, 7.577 636.170, 0.000 1000.000, 0.000 1000.000, 243.234 "
+fill = "none" stroke = "black"/>
+<polygon points = "642.650, 7.577 940.071, 224.439 870.021, 231.242 673.266, 74.441 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "642.650, 7.577 673.266, 74.441 0.000, 85.971 0.000, 0.000 636.170, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "886.371, 1000.000 867.678, 371.908 881.854, 306.821 1000.000, 373.304 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame24"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "839.195, 125.368 1000.000, 178.672 1000.000, 655.540 "
+fill = "none" stroke = "black"/>
+<polygon points = "984.975, 1000.000 0.000, 1000.000 0.000, 36.335 686.184, 18.402 839.195, 125.368 1000.000, 655.540 1000.000, 737.282 "
+fill = "none" stroke = "black"/>
+<polygon points = "839.195, 125.368 686.184, 18.402 669.603, 0.000 1000.000, 0.000 1000.000, 178.672 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "686.184, 18.402 0.000, 36.335 0.000, 0.000 669.603, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "984.975, 1000.000 1000.000, 737.282 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame25"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "997.429, 1000.000 924.371, 1000.000 587.223, 35.752 678.748, 28.694 876.708, 152.465 1000.000, 490.567 1000.000, 695.899 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "876.708, 152.465 878.465, 152.487 1000.000, 195.366 1000.000, 490.567 "
+fill = "none" stroke = "black"/>
+<polygon points = "587.223, 35.752 924.371, 1000.000 0.000, 1000.000 0.000, 46.679 "
+fill = "none" stroke = "black"/>
+<polygon points = "878.465, 152.487 667.932, 0.000 1000.000, 0.000 1000.000, 195.366 "
+fill = "none" stroke = "black"/>
+<polygon points = "878.465, 152.487 876.708, 152.465 678.748, 28.694 661.842, 0.000 667.932, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "678.748, 28.694 587.223, 35.752 0.000, 46.679 0.000, 0.000 661.842, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "997.429, 1000.000 1000.000, 695.899 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame26"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "747.027, 1000.000 0.000, 1000.000 0.000, 239.173 791.878, 190.502 812.628, 258.738 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "812.628, 258.738 791.878, 190.502 826.381, 133.602 1000.000, 149.336 1000.000, 284.930 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "826.381, 133.602 730.581, 0.000 1000.000, 0.000 1000.000, 149.336 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "826.381, 133.602 791.878, 190.502 0.000, 239.173 0.000, 0.000 730.581, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "747.027, 1000.000 812.628, 258.738 1000.000, 284.930 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame27"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "266.192, 168.675 213.278, 1000.000 0.000, 1000.000 0.000, 175.200 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "275.244, 158.716 144.223, 0.000 1000.000, 0.000 1000.000, 208.141 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "275.244, 158.716 266.192, 168.675 0.000, 175.200 0.000, 0.000 144.223, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "213.278, 1000.000 266.192, 168.675 275.244, 158.716 1000.000, 208.141 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame28"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "259.108, 1000.000 0.000, 1000.000 0.000, 10.700 124.001, 0.000 460.089, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "259.108, 1000.000 460.089, 0.000 1000.000, 0.000 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = "0.000, 10.700 0.000, 0.000 124.001, 0.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame29"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "0.000, 1000.000 0.000, 0.000 742.114, 0.000 1000.000, 173.174 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "742.114, 0.000 1000.000, 0.000 1000.000, 173.174 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame30"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
+<g>
+<polygon points = "707.061, 823.642 667.503, 1000.000 0.000, 1000.000 0.000, 938.148 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "707.061, 823.642 0.000, 938.148 0.000, 0.000 1000.000, 0.000 1000.000, 431.185 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<polygon points = "667.503, 1000.000 707.061, 823.642 1000.000, 431.185 1000.000, 1000.000 "
+fill = "none" stroke = "black"/>
+<polygon points = ""
+fill = "none" stroke = "black"/>
+<animate
+    id = "frame31"
+    attributeName = "display"
+    values = "none;none;none;none;none;none"
+    keyTimes = "0.000;0.200;0.400;0.600;0.800;1"
+   dur = "5s"
+    begin = "0s"
+    repeatCount = "indefinite"/>
+</g>
